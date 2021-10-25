@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Course</title>
+</head>
+<body>
+<main>
+  <h1>Create course</h1>
+  <form th:object="${course}"
+        th:action="@{/course/add}"
+        method="post">
+    <div>
+      <label for="name">name</label>
+      <input id="name" type="text"
+             th:field="*{name}">
+
+    </div>
+    <div>
+      <label for="definition">Definition</label>
+      <input id="definition" type="text"
+             th:field="*{definition}">
+    </div>
+    <div>
+      <label for="type">Type</label>
+      <input id="type" type="text"
+             th:field="*{type}">
+    </div>
+    <div>
+      <label for="mentorCourseName">Mentor Name</label>
+      <input id="mentorCourseName" type="text"
+             th:field="*{mentorCourseName}">
+    </div>
+    <button type="submit">Create course</button>
+  </form>
+</main>
+
+</body>
+</html>
